@@ -1,3 +1,26 @@
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+<div class="min-h-screen bg-gray-100 py-8">
+      <div class="max-w-4xl mx-auto px-4">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">
+          MSW testing with Angular
+        </h1>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <h2 class="text-xl font-semibold mb-4">Usuarios</h2>                   
+          <button for
+            (click)="addUser()"
+            class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
+          >
+            Agregar Usuario
+          </button>
+
+          <div class="bg-gray-600 border-b-fuchsia-700 rounded-lg p-4 mt-1.5">
+            <h2 class="text-xl font-semibold text-white mb-4">Aqui va la tasa</h2>
+              <ul class="users">
+                <li *ngFor="let user of users" class="text-gray-300">
+                  {{ user.name }} ({{ user.email }})
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>

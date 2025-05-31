@@ -1,4 +1,5 @@
 import { http, HttpResponse } from 'msw'
+import { IUser } from '../app/services/user.service';
 
 export const handlers = [
   // Ejemplo de API mock
@@ -10,9 +11,20 @@ export const handlers = [
   }),
 
   http.post('/api/users', async ({ request }) => {
-    const newUser = await request.json()
+    const newUser = await request.json() as Partial<IUser>;
+
+    if (!newUser.name?.trim() || !newUser.email?.trim()) {
+      return HttpResponse.json(
+        { error: 'Name and email are required' },
+        { status: 400 }
+      )
+    }
+
     return HttpResponse.json(
-      { id: Date.now(), user: newUser },
+      { id: Date.now(),
+        name: newUser.name,
+        email: newUser.email
+     },
       { status: 201 }
     )
   }),
