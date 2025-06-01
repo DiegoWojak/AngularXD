@@ -21,12 +21,7 @@ export class UserService {
   }
 
   getUsers(): Observable<IUser[]> {
-    try{
-      return this.http.get<IUser[]>('/api/users');
-    }catch (error) {
-      console.error('Error fetching users:', error);
-      throw error; // Re-throw the error for further handling if needed
-    }
+    return this.http.get<IUser[]>('/api/users');
   }
   createUser(user: Omit<IUser, 'id'>): Observable<IUser> {
     return this.http.post<IUser>('/api/users', user);

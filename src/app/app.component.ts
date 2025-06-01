@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { IUser, UserService } from './services/user.service';
 import { worker } from '../mocks/browser';
+import { MainflujoPanelComponent } from './components/mainflujo-panel/mainflujo-panel.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { worker } from '../mocks/browser';
   imports: [
     //RouterOutlet, 
     CommonModule,
-    
+    MainflujoPanelComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
