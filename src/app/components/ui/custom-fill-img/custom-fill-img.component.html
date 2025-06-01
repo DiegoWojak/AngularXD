@@ -1,0 +1,16 @@
+<div class="fill-image-container" [style.width.px]="width" [style.height.px]="height">
+    <div class="image-background">
+    <img [src]="'/owl.png'" [alt]="alt" class="base-image">
+    </div>
+    
+    <div class="fill-overlay" [style.height.%]="100 - fillPercentage">
+    <img [src]="'/owl-b.png'" [alt]="alt" class="overlay-image">
+    </div>
+    
+    <div class="fill-indicator" *ngIf="showIndicator">
+    <div class="percentage-text">{{ Math.round(fillPercentage) }}%</div>
+    <div class="fill-bar">
+        <div class="fill-bar-progress" [style.height.%]="fillPercentage"></div>
+    </div>
+    </div>
+</div>

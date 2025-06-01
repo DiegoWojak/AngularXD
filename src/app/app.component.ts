@@ -32,7 +32,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     worker.start().then(() => {
-      this.loadUsers();
+      //this.loadUsers();
     });
   }
 

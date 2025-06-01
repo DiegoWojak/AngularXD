@@ -1,0 +1,16 @@
+<div class="slider-container">
+    <label class="slider-label" *ngIf="label">{{ label }}</label>
+    <div class="slider-wrapper">
+    <span class="slider-value">{{ min }}</span>
+    <div class="slider-track" (click)="onTrackClick($event)">
+        <div class="slider-fill" [style.width.%]="fillPercentage"></div>
+        <div 
+        class="slider-thumb" 
+        [style.left.%]="thumbPosition"
+        (mousedown)="startDrag($event)"
+        ></div>
+    </div>
+    <span class="slider-value">{{ max }}</span>
+    </div>
+    <div class="current-value">{{ currentValue }}</div>
+</div>

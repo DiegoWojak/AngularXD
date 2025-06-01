@@ -1,0 +1,9 @@
+<button 
+      class="game-btn" 
+      [ngClass]="[buttonType, size]"
+      [disabled]="disabled"
+      (click)="onClick()"
+    >
+    <span class="btn-text">{{ text }}</span>
+    <div class="btn-icon" *ngIf="icon">{{ icon }}</div>
+</button>

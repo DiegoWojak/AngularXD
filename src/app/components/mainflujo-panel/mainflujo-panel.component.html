@@ -3,7 +3,9 @@
         <button *ngIf="showClose" class="close-btn mt-[-3em]" (click)="onClose()">Cerrar</button>
         <h3 class="panel-title mt-3 font-extralight text-3xl m-0.5 text-sky-400 dark:text-amber-50">{{ title }}</h3>
     </div>
-    <div class="panel-content">
-    <ng-content></ng-content>
+    <div class="panel-content flex-row items-end justify-center m-10">
+        <app-custom-btn/>
+        <app-custom-fill-img [fillPercentage]="fillValue" />
+        <app-custom-slider (valueChange)="onSliderTrackClick($event)" />
     </div>
 </div>
