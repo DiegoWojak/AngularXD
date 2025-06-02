@@ -13,7 +13,8 @@ export class CustomBtnComponent {
   @Input() icon: string = '';
   @Input() buttonType: string = 'primary';
   @Input() size: string = 'medium';
-  @Input() disabled: boolean = false;
+  @Input() disabled: boolean = true;
+  @Input() extraClasses: string = '';
   @Output() clicked = new EventEmitter<void>();
 
   onClick() {

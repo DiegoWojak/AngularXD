@@ -22,7 +22,7 @@ export class MainflujoPanelComponent {
   fillValue = 0;
   @Input() title: string = 'Evaluación de Accesos';
   @Input() showClose: boolean = true;
-  @Input() panelClass: string = 'min-h-150';
+  @Input() panelClass: string = 'min-h-50';
 
   //min-width-200 min-height-100
   //min-width-210 min-height-150

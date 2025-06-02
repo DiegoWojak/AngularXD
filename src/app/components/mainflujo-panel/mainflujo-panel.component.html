@@ -3,9 +3,16 @@
         <button *ngIf="showClose" class="close-btn mt-[-3em]" (click)="onClose()">Cerrar</button>
         <h3 class="panel-title mt-3 font-extralight text-3xl m-0.5 text-sky-400 dark:text-amber-50">{{ title }}</h3>
     </div>
-    <div class="panel-content flex-row items-end justify-center m-10">
-        <app-custom-btn/>
+    <div class="panel-content flex-auto items-end justify-center m-10 min-h-150">
         <app-custom-fill-img [fillPercentage]="fillValue" />
+        <app-custom-btn 
+            [extraClasses]="'ml-auto mt-2'" 
+            [disabled]="false" 
+            [text]="'Acceder'" 
+            [icon]="'🎅'" 
+        />
+    </div>
+    <div class="panel-footer mb-0 p-1.5 bg-sky-800">
         <app-custom-slider (valueChange)="onSliderTrackClick($event)" />
     </div>
 </div>

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+//import { RouterOutlet } from '@angular/router';
 import { IUser, UserService } from './services/user.service';
 import { worker } from '../mocks/browser';
 import { MainflujoPanelComponent } from './components/mainflujo-panel/mainflujo-panel.component';
@@ -22,6 +22,7 @@ export class AppComponent implements OnInit{
   users: IUser[] = [];
   start = Date.now();
   userId = 0;
+  
   /**
    *
    */
